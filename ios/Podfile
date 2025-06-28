@@ -1,12 +1,8 @@
 platform :ios, '13.0'
 
-# Prevents CocoaPods analytics from slowing down builds
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
-# Define the Flutter root relative to this file
-flutter_root = File.expand_path(File.join('..', 'flutter'))
-
-load File.join(flutter_root, 'packages', 'flutter_tools', 'bin', 'podhelper.rb')
+load File.join(ENV['FLUTTER_ROOT'], 'packages', 'flutter_tools', 'bin', 'podhelper.rb')
 
 target 'Runner' do
   install_all_flutter_pods
